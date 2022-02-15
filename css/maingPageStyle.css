@@ -30,17 +30,16 @@ html {
 .main__page-button {
   width: fit-content;
   padding: 15px 25px;
-  background-color: #6eb257;
+  background-color: #29971f;
   text-decoration: none;
   color: white;
   font-family: "Poppins", sans-serif;
-  border: 0.2px solid black;
+
   transition: all 0.2s ease-in-out;
 }
 
 .main__page-button:hover {
-  background-color: #588f45;
-  box-shadow: 1px 1px 0 #000000;
+  background-color: #155210;
 }
 
 .main__page-button:active {
