@@ -1,6 +1,7 @@
 const body = document.querySelector("body");
 const checkboxes = document.querySelectorAll(".CheckboxButton");
 
+//Превращение кнопки в чекбокс с двумя стейтами
 checkboxes.forEach((checkbox) => {
   checkbox.value = 0;
   checkbox.addEventListener("click", (e) => {
