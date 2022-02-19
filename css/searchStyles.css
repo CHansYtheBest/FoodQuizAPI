@@ -138,6 +138,8 @@ h1 {
 
 .typeButton {
   text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
 
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
@@ -149,7 +151,7 @@ h1 {
   line-height: 36px;
   cursor: pointer;
 
-  width: 242px;
+  width: 234px;
   height: 281px;
 
   color: #ffffff;
@@ -167,8 +169,7 @@ h1 {
 .checked {
   /*КАРТОЧКИ ВКЛ */
   filter: grayscale(0%);
-  outline: 3px solid #0c9117;
-  z-index: 10;
+  outline: 6px solid #0c9117;
 }
 /* КАРТОЧКИ */
 
