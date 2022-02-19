@@ -10,6 +10,7 @@ nextButton.addEventListener("click", (e) => {
   } else {
     CurrentPage++;
     NavFooter.dataset.page = CurrentPage;
+    changeCurrentPageView(CurrentPage);
   }
 });
 
@@ -19,6 +20,7 @@ backButton.addEventListener("click", (e) => {
   } else {
     CurrentPage--;
     NavFooter.dataset.page = CurrentPage;
+    changeCurrentPageView(CurrentPage);
   }
 });
 
