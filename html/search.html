@@ -24,12 +24,13 @@
           Back to main page</a
         >
       </div>
-      <h1 class="mainText">
+      <h1 class="step1_H1">
         Step 1:<br />
         Select the type of food
       </h1>
       <div style="width: 288px"></div>
     </header>
+
     <section id="stepType" class="stepSection">
       <div class="typeButtonsBlockOFF">
         <button class="typeButton CheckboxButton" style="background-image: url(/images/mainCurse.png)" role="checkbox" data-value="main-course">
@@ -64,6 +65,7 @@
         <button class="typeButton CheckboxButton" style="background-image: url(/images/type14.png)" role="checkbox" data-value="drink">Drink</button>
       </div>
     </section>
+
     <section id="stepCusine" class="stepSection hidden">
       <h1>Step 2<br /></h1>
       <div class="cuisineBittonsBlock">
@@ -94,6 +96,7 @@
         <button class="CuisineButton CheckboxButton" role="checkbox" data-value="vietnamese">Vietnamese</button>
       </div>
     </section>
+
     <section id="stepDiet" class="stepSection hidden">
       <h1>Step 3<br /></h1>
       <div class="dietButtonsBlock">
@@ -110,6 +113,7 @@
         <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="whole30">Whole30</button>
       </div>
     </section>
+
     <section id="stepIntolar" class="stepSection hidden">
       <h1>Step 4<br /></h1>
       <div class="intolarButtonsBlock">
@@ -127,6 +131,7 @@
         <button class="intolarButton CheckboxButton" role="checkbox" data-value="wheat">Wheat</button>
       </div>
     </section>
+
     <section id="stepIngredients" class="stepSection hidden">
       <h1>Step 5<br /></h1>
       <div class="ingredientsBlock">
@@ -134,7 +139,8 @@
         <div class="ingredientsChoosed"></div>
       </div>
     </section>
-    <footer id="pageStatus" class="NavigationFooter" data-page="0">
+
+    <footer id="pageStatus" class="NavigationFooter opacity0" data-page="0">
       <button class="BackButton NavigationButton">
         <svg class="backArrow" width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -145,7 +151,7 @@
         </svg>
         Previous step
       </button>
-      <div class="pageCounter opacity0">
+      <div class="pageCounter">
         <svg class="pageCounterElement currentPage" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="10" cy="10" r="10" />
         </svg>
@@ -178,5 +184,5 @@
   <script src="/js/navigationFunc.js"></script>
   <script src="/js/inputAutocomplete.js"></script>
   <script src="/js/getDataFromApi.js"></script>
-  <script onload="mainTextAnimation()" src="/js/stylesForSearch.js"></script>
+  <script onload="step1_H1Animation()" src="/js/stylesForSearch.js"></script>
 </html>

@@ -18,7 +18,7 @@ h1 {
 }
 
 /* ОСНОВНОЙ ТЕКСТ */
-.mainText {
+.step1_H1 {
   display: flex;
   justify-content: center;
   margin-top: 350px;
@@ -35,7 +35,7 @@ h1 {
   color: #ffffff;
 }
 
-.smallMainText {
+.smallstep1_H1 {
   text-align: center;
   margin-top: 40px;
 
@@ -49,7 +49,7 @@ h1 {
 
   color: #ffffff;
 
-  transition: all 2s;
+  transition: all 0.5s;
 }
 /* ОСНОВНОЙ ТЕКСТ */
 
@@ -115,9 +115,9 @@ h1 {
 /* КАРТОЧКИ */
 #stepType {
   margin-top: 68px;
-  margin-bottom: 59px;
+  margin-bottom: 65px;
 
-  height: 562px;
+  height: 100%;
 }
 
 .typeButtonsBlockOFF {
@@ -143,8 +143,9 @@ h1 {
 
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
+
+  border: black;
   outline: 3px solid #ffffff;
-  border: none;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
@@ -152,7 +153,7 @@ h1 {
   cursor: pointer;
 
   width: 234px;
-  height: 281px;
+  height: 260px;
 
   color: #ffffff;
 
@@ -169,6 +170,7 @@ h1 {
 .checked {
   /*КАРТОЧКИ ВКЛ */
   filter: grayscale(0%);
+  font-size: 36px;
   outline: 6px solid #0c9117;
 }
 /* КАРТОЧКИ */
@@ -178,6 +180,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 1s;
 
   height: 78px;
 }
@@ -292,6 +295,10 @@ h1 {
 
 .opacity0 {
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 1;
+}
+
+.opacity0Fast {
+  opacity: 0;
 }
 /* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
