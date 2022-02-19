@@ -24,22 +24,39 @@ html {
   color: white;
   width: fit-content;
   text-shadow: rgb(0, 0, 0) 0 0 10px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .main__page-button {
-  width: fit-content;
-  padding: 15px 25px;
-  background-color: #29971f;
-  text-decoration: none;
-  color: white;
-  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 
-  transition: all 0.2s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  background: none;
+  border-radius: 20px;
+  border: 2px solid white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  cursor: pointer;
+  text-decoration: none;
+
+  width: 250px;
+  height: 78px;
+
+  color: #ffffff;
+
+  transition: all 0.5s;
 }
 
 .main__page-button:hover {
-  background-color: #217c18;
+  color: black;
+  background-color: white;
+
+  transition: all 0.5s;
 }
 
 .main__page-button:active {

@@ -1,16 +1,16 @@
 const mainText = document.querySelector(".mainText");
-const mainBlock = document.querySelector(".typeButtonsBlock");
+const mainBlock = document.querySelector(".typeButtonsBlockOFF");
 const circlesBlock = document.querySelector(".pageCounter");
 const circle = document.querySelectorAll(".pageCounterElement");
 
-function mainTextAnime() {
+function mainTextAnimation() {
   setTimeout(() => {
-    mainText.setAttribute("class", "mainText2");
+    mainText.setAttribute("class", "smallMainText");
     setTimeout(() => {
-      mainBlock.setAttribute("class", "typeButtonsBlock2");
+      mainBlock.setAttribute("class", "typeButtonsBlockON");
       circlesBlock.classList.remove("opacity0");
     }, 1500);
-  }, 2000);
+  }, 1500);
 }
 
 function changeCurrentPageView(CurrentPage) {

@@ -31,7 +31,7 @@
       <div style="width: 288px"></div>
     </header>
     <section id="stepType" class="stepSection">
-      <div class="typeButtonsBlock">
+      <div class="typeButtonsBlockOFF">
         <button class="typeButton CheckboxButton" style="background-image: url(/images/mainCurse.png)" role="checkbox" data-value="main-course">
           Main course
         </button>
@@ -64,7 +64,7 @@
         <button class="typeButton CheckboxButton" style="background-image: url(/images/type14.png)" role="checkbox" data-value="drink">Drink</button>
       </div>
     </section>
-    <section id="stepCusine" class="stepSection">
+    <section id="stepCusine" class="stepSection hidden">
       <h1>Step 2<br /></h1>
       <div class="cuisineBittonsBlock">
         <button class="CuisineButton CheckboxButton" role="checkbox" data-value="african">African</button>
@@ -94,7 +94,7 @@
         <button class="CuisineButton CheckboxButton" role="checkbox" data-value="vietnamese">Vietnamese</button>
       </div>
     </section>
-    <section id="stepDiet" class="stepSection">
+    <section id="stepDiet" class="stepSection hidden">
       <h1>Step 3<br /></h1>
       <div class="dietButtonsBlock">
         <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="gluten-free">Gluten Free</button>
@@ -110,7 +110,7 @@
         <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="whole30">Whole30</button>
       </div>
     </section>
-    <section id="stepIntolar" class="stepSection">
+    <section id="stepIntolar" class="stepSection hidden">
       <h1>Step 4<br /></h1>
       <div class="intolarButtonsBlock">
         <button class="intolarButton CheckboxButton" role="checkbox" data-value="dairy">Dairy</button>
@@ -127,7 +127,7 @@
         <button class="intolarButton CheckboxButton" role="checkbox" data-value="wheat">Wheat</button>
       </div>
     </section>
-    <section id="stepIngredients" class="stepSection">
+    <section id="stepIngredients" class="stepSection hidden">
       <h1>Step 5<br /></h1>
       <div class="ingredientsBlock">
         <input class="ingredientsInput" type="text" />
@@ -178,5 +178,5 @@
   <script src="/js/navigationFunc.js"></script>
   <script src="/js/inputAutocomplete.js"></script>
   <script src="/js/getDataFromApi.js"></script>
-  <script onload="mainTextAnime()" src="/js/stylesForSearch.js"></script>
+  <script onload="mainTextAnimation()" src="/js/stylesForSearch.js"></script>
 </html>
