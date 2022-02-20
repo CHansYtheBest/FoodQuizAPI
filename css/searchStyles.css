@@ -2,7 +2,7 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url(/images/mainPhoto2.png);
+  background-image: url(/images/bgBlur.png);
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -49,7 +49,7 @@ h1 {
 
   color: #ffffff;
 
-  transition: all 0.5s;
+  transition: all 1.5s;
 }
 /* ОСНОВНОЙ ТЕКСТ */
 
@@ -145,24 +145,25 @@ h1 {
   -webkit-text-stroke-color: rgb(0, 0, 0);
 
   border: black;
-  outline: 3px solid #ffffff;
+  outline: 1.5px solid #9e6636;
+  border-radius: 20px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 28px;
   line-height: 36px;
   cursor: pointer;
-
+  font-family: "Alfa Slab One", cursive;
   width: 234px;
   height: 260px;
 
   color: #ffffff;
 
   transition: all 0.5s;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 .typeButton:hover {
-  font-size: 36px;
-  text-shadow: 4px 4px 4px rgb(0, 0, 0);
+  font-size: 33px;
+  text-shadow: 3px 3px 3px rgb(0, 0, 0);
 
   transition: all 0.5s;
 }
@@ -171,7 +172,8 @@ h1 {
   /*КАРТОЧКИ ВКЛ */
   filter: grayscale(0%);
   font-size: 36px;
-  outline: 6px solid #0c9117;
+  color: #09ff00;
+  outline: 4px solid #00ff15;
 }
 /* КАРТОЧКИ */
 
@@ -295,7 +297,7 @@ h1 {
 
 .opacity0 {
   opacity: 0;
-  transition: all 1;
+  transition: all 1s;
 }
 
 .opacity0Fast {
