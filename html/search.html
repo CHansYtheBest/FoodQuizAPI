@@ -13,7 +13,7 @@
   </head>
   <body class="container">
     <header class="NavigationHeader">
-      <div class="HeaderBlock">
+      <div class="HeaderBlock opacity0">
         <a class="HeaderAhref" href="/html/mainPage.html"
           ><svg class="backMainPageArrow" width="37" height="25" viewBox="0 0 37 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -25,10 +25,13 @@
           Back to main page</a
         >
       </div>
-      <h1 class="step1_H1">
-        Step 1:<br />
-        Select the type of food
-      </h1>
+      <div class="h1Block">
+        <h1 class="MegaSize_main_H1">Step 1:</h1>
+        <h1 class="main_H1 hidden">Step 2:</h1>
+        <h1 class="main_H1 hidden">Step 3:</h1>
+        <h1 class="main_H1 hidden">Step 4:</h1>
+        <h1 class="main_H1 hidden">Step 5:</h1>
+      </div>
       <div style="width: 288px"></div>
     </header>
 
@@ -67,56 +70,110 @@
       </div>
     </section>
 
-    <section id="stepCusine" class="stepSection hidden">
-      <h1>Step 2<br /></h1>
-      <div class="cuisineBittonsBlock">
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="african">African</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="american">American</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="british">British</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="cajun">Cajun</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="caribbean">Caribbean</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="chinese">Chinese</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="eastern-european">Eastern European</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="european">European</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="french">French</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="german">German</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="greek">Greek</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="indian">Indian</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="irish">Irish</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="japanise">Japanise</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="jewish">Jewish</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="korean">Korean</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="latin-american">Latin American</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="mediterranean">Mediterranean</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="mexican">Mexican</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="middle-eastern">Middle Eastern</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="nordic">Nordic</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="southern">Southern</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="spanish">Spanish</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="thai">Thai</button>
-        <button class="CuisineButton CheckboxButton" role="checkbox" data-value="vietnamese">Vietnamese</button>
+    <section id="stepCuisine" class="stepSection hidden">
+      <div class="cuisineButtonsBlockOFF">
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine1.png)" role="checkbox" data-value="african">
+          African
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine2.png)" role="checkbox" data-value="american">
+          American
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine3.png)" role="checkbox" data-value="british">
+          British
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine4.png)" role="checkbox" data-value="cajun">
+          Cajun
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine5.png)" role="checkbox" data-value="caribbean">
+          Caribbean
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine6.png)" role="checkbox" data-value="chinese">
+          Chinese
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine7.png)"
+          role="checkbox"
+          data-value="eastern-european"
+        >
+          Eastern European
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine8.png)" role="checkbox" data-value="european">
+          European
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine9.png)" role="checkbox" data-value="french">
+          French
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine10.png)" role="checkbox" data-value="german">
+          German
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine11.png)" role="checkbox" data-value="greek">
+          Greek
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine12.png)" role="checkbox" data-value="indian">
+          Indian
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine13.png)" role="checkbox" data-value="irish">
+          Irish
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine14.png)" role="checkbox" data-value="japanise">
+          Japanise
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine15.png)" role="checkbox" data-value="jewish">
+          Jewish
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine16.png)" role="checkbox" data-value="korean">
+          Korean
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine17.png)" role="checkbox" data-value="latin-american">
+          Latin American
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine18.png)" role="checkbox" data-value="mediterranean">
+          Mediterranean
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine19.png)" role="checkbox" data-value="mexican">
+          Mexican
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine20.png)" role="checkbox" data-value="middle-eastern">
+          Middle Eastern
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine21.png)" role="checkbox" data-value="nordic">
+          Nordic
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine22.png)" role="checkbox" data-value="southern">
+          Southern
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine23.png)" role="checkbox" data-value="spanish">
+          Spanish
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine24.png)" role="checkbox" data-value="thai">
+          Thai
+        </button>
+        <button class="CuisineButton CheckboxButton" style="background-image: url(/images/cuisine25.png)" role="checkbox" data-value="vietnamese">
+          Vietnamese
+        </button>
       </div>
     </section>
 
     <section id="stepDiet" class="stepSection hidden">
-      <h1>Step 3<br /></h1>
-      <div class="dietButtonsBlock">
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="gluten-free">Gluten Free</button>
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="ketogenic">Ketogenic</button>
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="vegetarian">Vegetarian</button>
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="lacto-Vegetarian">Lacto-Vegetarian</button>
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="ovo-Vegetarian">Ovo-Vegetarian</button>
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="vegan">Vegan</button>
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="pescetarian">Pescetarian</button>
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="paleo">Paleo</button>
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="primal">Primal</button>
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="low-fodmap">Low FODMAP</button>
-        <button class="ingredientsButton CheckboxButton" role="checkbox" data-value="whole30">Whole30</button>
+      <div style="display: flex; justify-content: center; height: 100%">
+        <div class="dietButtonsBlock">
+          <button class="dietButton CheckboxButton" role="checkbox" data-value="gluten-free">Gluten Free</button>
+          <button class="dietButton CheckboxButton" role="checkbox" data-value="ketogenic">Ketogenic</button>
+          <button class="dietButton CheckboxButton" role="checkbo x" data-value="vegetarian">Vegetarian</button>
+          <button class="dietButton CheckboxButton" role="checkbox" data-value="lacto-Vegetarian">Lacto-Vegetarian</button>
+          <button class="dietButton CheckboxButton" role="checkbox" data-value="ovo-Vegetarian">Ovo-Vegetarian</button>
+          <button class="dietButton CheckboxButton" role="checkbox" data-value="vegan">Vegan</button>
+          <button class="dietButton CheckboxButton" role="checkbox" data-value="pescetarian">Pescetarian</button>
+          <button class="dietButton CheckboxButton" role="checkbox" data-value="paleo">Paleo</button>
+          <button class="dietButton CheckboxButton" role="checkbox" data-value="primal">Primal</button>
+          <button class="dietButton CheckboxButton" role="checkbox" data-value="low-fodmap">Low FODMAP</button>
+          <button class="dietButton CheckboxButton" role="checkbox" data-value="whole30">Whole30</button>
+        </div>
       </div>
     </section>
 
     <section id="stepIntolar" class="stepSection hidden">
-      <h1>Step 4<br /></h1>
       <div class="intolarButtonsBlock">
         <button class="intolarButton CheckboxButton" role="checkbox" data-value="dairy">Dairy</button>
         <button class="intolarButton CheckboxButton" role="checkbox" data-value="egg">Egg</button>
@@ -134,7 +191,6 @@
     </section>
 
     <section id="stepIngredients" class="stepSection hidden">
-      <h1>Step 5<br /></h1>
       <div class="ingredientsBlock">
         <input class="ingredientsInput" type="text" />
         <div class="ingredientsChoosed"></div>
@@ -153,7 +209,22 @@
         Previous step
       </button>
       <div class="pageCounter">
-        <svg class="pageCounterElement currentPage" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="circles">
+          <div class="front frontWhite"><div class="back backBlack"></div></div>
+        </div>
+        <div class="circles">
+          <div class="front"><div class="back"></div></div>
+        </div>
+        <div class="circles">
+          <div class="front"><div class="back"></div></div>
+        </div>
+        <div class="circles">
+          <div class="front"><div class="back"></div></div>
+        </div>
+        <div class="circles">
+          <div class="front"><div class="back"></div></div>
+        </div>
+        <!-- <svg class="pageCounterElement currentPage" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="10" cy="10" r="10" />
         </svg>
         <svg class="pageCounterElement" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +238,7 @@
         </svg>
         <svg class="pageCounterElement" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="10" cy="10" r="10" />
-        </svg>
+        </svg> -->
       </div>
       <button class="NextButton NavigationButton">
         Next step<svg class="nextArrow" width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,5 +256,5 @@
   <script src="/js/navigationFunc.js"></script>
   <script src="/js/inputAutocomplete.js"></script>
   <script src="/js/getDataFromApi.js"></script>
-  <script onload="step1_H1Animation()" src="/js/stylesForSearch.js"></script>
+  <script onload="main_H1Animation()" src="/js/stylesForSearch.js"></script>
 </html>

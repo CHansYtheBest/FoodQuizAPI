@@ -1,37 +1,68 @@
-const step1_H1 = document.querySelector(".step1_H1");
+const MegaSize_main_H1 = document.querySelector(".MegaSize_main_H1");
+var main_H1_collection = document.querySelectorAll(".main_H1");
+
+const currentSection = document.querySelectorAll(".stepSection");
+
 const mainBlock = document.querySelector(".typeButtonsBlockOFF");
 const footer = document.querySelector(".NavigationFooter");
-const circle = document.querySelectorAll(".pageCounterElement");
+const backToMenuAhref = document.querySelector(".HeaderBlock");
 
-function step1_H1Animation() {
+const circle = document.querySelectorAll(".circles");
+const frontCircle = document.querySelectorAll(".front");
+const backCircle = document.querySelectorAll(".back");
+
+function main_H1Animation() {
   setTimeout(() => {
-    step1_H1.setAttribute("class", "smallstep1_H1");
+    MegaSize_main_H1.setAttribute("class", "main_H1");
+    main_H1_collection = document.querySelectorAll(".main_H1");
     setTimeout(() => {
       mainBlock.setAttribute("class", "typeButtonsBlockON");
       footer.classList.remove("opacity0");
-    }, 1500);
-  }, 1500);
+      backToMenuAhref.classList.remove("opacity0");
+    }, 0); //1500
+  }, 0); //1500
+}
+
+function changeCase(pageNumber) {
+  circle[pageNumber].classList.add("currentPage");
+
+  for (let i = 0; i < 5; i++) {
+    frontCircle[i].classList.remove("frontWhite");
+    backCircle[i].classList.remove("backBlack");
+  }
+
+  for (let i = 0; i < 5; i++) {
+    main_H1_collection[i].classList.add("hidden");
+  }
+
+  for (let i = 0; i < 5; i++) {
+    currentSection[i].classList.add("hidden");
+  }
+
+  frontCircle[pageNumber].classList.add("frontWhite");
+  backCircle[pageNumber].classList.add("backBlack");
+
+  currentSection[pageNumber].classList.remove("hidden");
+
+  main_H1_collection[pageNumber].classList.remove("hidden");
 }
 
 function changeCurrentPage(CurrentPage) {
-  circle.forEach((e) => {
-    e.classList.remove("currentPage");
-  });
   switch (CurrentPage) {
     case 0:
-      circle[0].classList.add("currentPage");
+      changeCase(0);
       break;
     case 1:
-      circle[1].classList.add("currentPage");
+      changeCase(1);
       break;
     case 2:
-      circle[2].classList.add("currentPage");
+      changeCase(2);
       break;
     case 3:
-      circle[3].classList.add("currentPage");
+      changeCase(3);
       break;
     case 4:
-      circle[4].classList.add("currentPage");
+      changeCase(4);
       break;
     default:
       break;
