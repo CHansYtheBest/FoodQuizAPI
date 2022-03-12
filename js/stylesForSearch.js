@@ -1,5 +1,5 @@
 const MegaSize_main_H1 = document.querySelector(".MegaSize_main_H1");
-var main_H1_collection = document.querySelectorAll(".main_H1");
+const main_H1_collection = document.querySelector(".main_H1");
 
 const currentSection = document.querySelectorAll(".stepSection");
 
@@ -13,14 +13,10 @@ const backCircle = document.querySelectorAll(".back");
 
 function main_H1Animation() {
   setTimeout(() => {
-    MegaSize_main_H1.setAttribute("class", "main_H1");
-    main_H1_collection = document.querySelectorAll(".main_H1");
-    setTimeout(() => {
-      mainBlock.setAttribute("class", "typeButtonsBlockON");
-      footer.classList.remove("opacity0");
-      backToMenuAhref.classList.remove("opacity0");
-    }, 0); //1500
-  }, 0); //1500
+    mainBlock.setAttribute("class", "typeButtonsBlockON");
+    footer.classList.remove("opacity0");
+    backToMenuAhref.classList.remove("opacity0");
+  }, 1500); //1500
 }
 
 function changeCase(pageNumber) {
@@ -31,38 +27,47 @@ function changeCase(pageNumber) {
     backCircle[i].classList.remove("backBlack");
   }
 
-  for (let i = 0; i < 5; i++) {
-    main_H1_collection[i].classList.add("hidden");
-  }
-
-  for (let i = 0; i < 5; i++) {
-    currentSection[i].classList.add("hidden");
-  }
-
   frontCircle[pageNumber].classList.add("frontWhite");
   backCircle[pageNumber].classList.add("backBlack");
 
-  currentSection[pageNumber].classList.remove("hidden");
+  changeCaseAnimantion(currentSection, pageNumber);
+}
 
-  main_H1_collection[pageNumber].classList.remove("hidden");
+function changeCaseAnimantion(element, pageNumber) {
+  for (let i = 0; i < 5; i++) {
+    element[i].classList.add("hidden");
+  }
+
+  element[pageNumber].classList.add("opacity0");
+  setTimeout(() => {
+    element[pageNumber].classList.remove("opacity0");
+    element[pageNumber].classList.add("opacity1");
+  }, 300);
+  element[pageNumber].classList.remove("opacity1");
+  element[pageNumber].classList.remove("hidden");
 }
 
 function changeCurrentPage(CurrentPage) {
   switch (CurrentPage) {
     case 0:
       changeCase(0);
+      main_H1_collection.textContent = "Step 1:";
       break;
     case 1:
       changeCase(1);
+      main_H1_collection.textContent = "Step 2:";
       break;
     case 2:
       changeCase(2);
+      main_H1_collection.textContent = "Step 3:";
       break;
     case 3:
       changeCase(3);
+      main_H1_collection.textContent = "Step 4:";
       break;
     case 4:
       changeCase(4);
+      main_H1_collection.textContent = "Step 5:";
       break;
     default:
       break;
