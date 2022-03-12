@@ -38,7 +38,7 @@
       <div style="width: 288px"></div>
     </header>
 
-    <section id="stepType" class="stepSection hidden">
+    <section id="stepType" class="stepSection">
       <div class="typeButtonsBlockOFF">
         <button
           class="typeButton CheckboxButton"
@@ -380,29 +380,116 @@
 
     <section id="stepIntolar" class="stepSection hidden">
       <div class="intolarButtonsBlock">
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="dairy">Dairy</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="egg">Egg</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="gluten">Gluten</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="grain">Grain</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="peanut">Peanut</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="seafood">Seafood</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="sesame">Sesame</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="shellfish">Shellfish</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="soy">Soy</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="sulfite">Sulfite</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="tree-nut">Tree Nut</button>
-        <button class="intolarButton CheckboxButton" role="checkbox" data-value="wheat">Wheat</button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="dairy"
+          style="background-image: url(/images/int1.png)"
+        >
+          Dairy
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="egg"
+          style="background-image: url(/images/int2.png)"
+        >
+          Egg
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="gluten"
+          style="background-image: url(/images/int3.png)"
+        >
+          Gluten
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="grain"
+          style="background-image: url(/images/int4.png)"
+        >
+          Grain
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="peanut"
+          style="background-image: url(/images/int5.png)"
+        >
+          Peanut
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="seafood"
+          style="background-image: url(/images/int6.png)"
+        >
+          Seafood
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="sesame"
+          style="background-image: url(/images/int7.png)"
+        >
+          Sesame
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="shellfish"
+          style="background-image: url(/images/int8.png)"
+        >
+          Shel- lfish
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="soy"
+          style="background-image: url(/images/int9.png)"
+        >
+          Soy
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="sulfite"
+          style="background-image: url(/images/int10.png)"
+        >
+          Sulfite
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="tree-nut"
+          style="background-image: url(/images/int11.png)"
+        >
+          Tree Nut
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="wheat"
+          style="background-image: url(/images/int12.png)"
+        >
+          Wheat
+        </button>
       </div>
     </section>
 
-    <section id="stepIngredients" class="stepSection">
-      <div class="ingredientsBlock">
-        <div class="inputBLOCK">
-          <input id="autocomplete" type="text" placeholder="Enter the name of the ingredient" autocomplete="off" />
-          <button class="inputAddButton">Add</button>
+    <section id="stepIngredients" class="stepSection hidden">
+      <div class="ingredientsCenter">
+        <div class="ingredientsBlock">
+          <div class="inputBLOCK">
+            <input id="autocomplete" type="text" placeholder="Enter the name of the ingredient" autocomplete="off" />
+            <button class="clearButton">✖</button>
+            <button class="inputAddButton">Add</button>
+          </div>
+          <div class="line"></div>
+          <div class="ingredientsChoosed"></div>
         </div>
-        <div class="line"></div>
-        <div class="ingredientsChoosed"></div>
       </div>
     </section>
 

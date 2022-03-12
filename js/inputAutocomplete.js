@@ -1,9 +1,9 @@
 const ingredientsInput = document.querySelector(".ingredientsInput");
 const addButton = document.querySelector(".inputAddButton");
 const cardsBlock = document.querySelector(".ingredientsChoosed");
+const clearButton = document.querySelector(".clearButton");
 
 var nameMas = [];
-var imgMas = [];
 let choosedValueArray = [];
 
 const Autocomplete = (selector) => {
@@ -65,7 +65,6 @@ const Autocomplete = (selector) => {
         .then((data) => {
           for (let i = 0; i < data.length; i++) {
             nameMas[i] = data[i].name;
-            imgMas[i] = data[i].image;
           }
           if (!value) return setActive(false);
 
@@ -98,56 +97,73 @@ const Autocomplete = (selector) => {
             focusItem(0);
             setActive(true);
           } else setActive(false);
-          addButton.addEventListener("click", function (e) {
-            for (let i = 0; i < nameMas.length; i++) {
-              if (input.value != nameMas[i]) {
-                choosedValueArray.push(input.value);
-                console.log(choosedValueArray);
-                let card = document.createElement("div");
-                let cardButton = document.createElement("button");
-
-                card.setAttribute("class", "ingredCard");
-                cardButton.setAttribute("class", "ingredCardButton");
-
-                cardsBlock.appendChild(card);
-                card.appendChild(cardButton);
-
-                cardButton.textContent = input.value;
-
-                input.value = "";
-              }
-            }
-
-            // console.log(choosedValueArray);
-          });
         });
 
       input.addEventListener("keydown", (e) => {
         let keyCode = e.keyCode;
 
-        // if (keyCode === 40) {
-        //   // arrow down
-        //   e.preventDefault();
-        //   focusedItem++;
-        //   focusItem(focusedItem);
-        // } else if (keyCode === 38) {
-        //   //arrow up
-        //   e.preventDefault();
-        //   if (focusedItem > 0) focusedItem--;
-        //   focusItem(focusedItem);
-        //
-        if (keyCode === 27) {
-          // escape
-          setActive(false);
-        } else if (keyCode === 13) {
-          // enter
-          selectItem(focusedItem);
+        switch (keyCode) {
+          case 40:
+            // arrow down
+            e.preventDefault();
+            focusedItem++;
+            focusItem(focusedItem);
+            break;
+          case 38:
+            //arrow up
+            e.preventDefault();
+            if (focusedItem > 0) focusedItem--;
+            focusItem(focusedItem);
+            break;
+          case 27:
+            //escape
+            setActive(false);
+            break;
+          case 13:
+            //enter
+            selectItem(focusedItem);
+            break;
+          default:
+            break;
         }
       });
 
       document.body.addEventListener("click", function (e) {
         if (!wrap.contains(e.target)) setActive(false);
       });
+    });
+
+    addButton.addEventListener("click", function (e) {
+      if (choosedValueArray.length > 0) {
+        for (let i = 0; i < choosedValueArray.length; i++) {
+          if (input.value == choosedValueArray[i]) {
+            console.log("have");
+            break;
+          } else {
+            choosedValueArray.push(input.value);
+            console.log(choosedValueArray);
+          }
+        }
+      } else {
+        choosedValueArray.push(input.value);
+      }
+
+      // let card = document.createElement("div");
+      // let cardButton = document.createElement("button");
+
+      // card.setAttribute("class", "ingredCard");
+      // cardButton.setAttribute("class", "ingredCardButton");
+
+      // cardsBlock.appendChild(card);
+      // card.appendChild(cardButton);
+
+      // cardButton.textContent = input.value;
+
+      input.value = "";
+    });
+
+    clearButton.addEventListener("click", function () {
+      input.value = "";
     });
   });
 };

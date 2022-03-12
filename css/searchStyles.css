@@ -117,6 +117,7 @@ h1 {
   margin-bottom: 65px;
 
   height: 540px;
+  width: 100%;
 }
 
 .typeButtonsBlockOFF {
@@ -215,10 +216,10 @@ h1 {
 
 .checked {
   /*КАРТОЧКИ ВКЛ */
-  filter: grayscale(0%);
+  filter: grayscale(0%) !important;
   font-size: 32px !important;
-  color: #09ff00;
-  outline: 4px solid #00ff15;
+  color: #09ff00 !important;
+  outline: 4px solid #00ff15 !important;
 }
 /* КАРТОЧКИ */
 
@@ -388,29 +389,7 @@ h1 {
 
 /* diet */
 
-/* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
-.hidden {
-  display: none;
-  transition: all 0.3s;
-}
-
-.opacity0 {
-  opacity: 0;
-  transition: all 0.3s;
-}
-
-.opacity1 {
-  opacity: 1;
-  transition: all 0.3s;
-}
-/* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
-
 /* INPUT */
-
-#stepIngredients {
-  display: flex;
-  justify-content: center;
-}
 
 .line {
   border-bottom: 1px solid black;
@@ -442,6 +421,7 @@ input {
   width: 300px;
   padding: 12px 0px 12px 12px;
   border: 2px solid #000000;
+  border-right: none;
   border-radius: 10px 0px 0px 10px;
   transition: all 0.3s ease;
   font-family: "Poppins", sans-serif;
@@ -454,7 +434,7 @@ input:focus {
 
 .inputBLOCK {
   display: flex;
-  width: 400px;
+  width: 450px;
   justify-content: space-between;
 }
 
@@ -550,4 +530,88 @@ input:focus {
   transition: all 0.3s;
 }
 
+.ingredientsCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.clearButton {
+  background: none;
+  display: block;
+  border: 2px solid #000000;
+  border-left: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 20px;
+  padding: 0px 14px;
+  color: #8a8a8a;
+}
+
+.clearButton:hover {
+  color: #000000;
+}
+
 /* CARDS */
+
+/* INTOLAR */
+
+.intolarButtonsBlock {
+  height: 530px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  transition: all 1s;
+}
+
+.intolarButton {
+  transition: all 1s;
+  height: 100%;
+  background: none;
+
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+
+  border: black;
+  outline: 1.5px solid #703a1b;
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  cursor: pointer;
+  font-family: "Alfa Slab One", cursive;
+
+  color: #ffffff;
+
+  transition: all 0.5s;
+}
+.intolarButton:hover {
+  font-size: 26px;
+  text-shadow: 3px 3px 3px rgb(0, 0, 0);
+
+  transition: all 0.5s;
+}
+
+/* INTOLAR */
+
+/* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
+.hidden {
+  display: none;
+  transition: all 0.3s;
+}
+
+.opacity0 {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.opacity1 {
+  opacity: 1;
+  transition: all 0.3s;
+}
+/* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
