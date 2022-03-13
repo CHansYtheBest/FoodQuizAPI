@@ -14,8 +14,12 @@ checkboxes.forEach((checkbox) => {
       }
     } else {
       checkbox.value = 0;
-      checkbox.classList.remove("checked");
-      checkbox.classList.remove("checked2");
+      if (CurrentPage == 3) {
+        checkbox.classList.remove("checked2");
+      }
+      {
+        checkbox.classList.remove("checked");
+      }
     }
   });
 });
