@@ -135,12 +135,39 @@ const Autocomplete = (selector) => {
       });
     });
 
-    addButton.addEventListener("click", function (e) {
+    const checkInput = async (input) => {
+      let res = await fetch(
+        `https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${input}`
+      );
+      let data = await res.json();
+      console.log(data);
+      let tempMas = [];
+      for (let i = 0; i < data.length; i++) {
+        tempMas[i] = data[i].name;
+      }
+
+      for (let i = 0; i < tempMas.length; i++) {
+        if (tempMas[i].includes(input)) {
+          return true;
+        }
+      }
+      return false;
+    };
+
+    addButton.addEventListener("click", async () => {
       if (choosedValueArray.includes(input.value)) {
         alertMassage.textContent = "You cant choose the same ingredient twice!";
-
         return;
       }
+
+      let test = await checkInput(input.value);
+      console.log(test, "check");
+
+      if (test == false) {
+        alertMassage.textContent = "This ingredient does not exist!";
+        return;
+      }
+
       choosedValueArray.push(input.value);
 
       let card = document.createElement("div");
