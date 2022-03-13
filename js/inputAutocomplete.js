@@ -134,30 +134,18 @@ const Autocomplete = (selector) => {
     });
 
     addButton.addEventListener("click", function (e) {
-      if (choosedValueArray.length > 0) {
-        for (let i = 0; i < choosedValueArray.length; i++) {
-          if (input.value == choosedValueArray[i]) {
-            console.log("have");
-            break;
-          } else {
-            choosedValueArray.push(input.value);
-            console.log(choosedValueArray);
-          }
-        }
-      } else {
-        choosedValueArray.push(input.value);
-      }
+      choosedValueArray.push(input.value);
 
-      // let card = document.createElement("div");
-      // let cardButton = document.createElement("button");
+      let card = document.createElement("div");
+      let cardButton = document.createElement("button");
 
-      // card.setAttribute("class", "ingredCard");
-      // cardButton.setAttribute("class", "ingredCardButton");
+      card.setAttribute("class", "ingredCard");
+      cardButton.setAttribute("class", "ingredCardButton");
 
-      // cardsBlock.appendChild(card);
-      // card.appendChild(cardButton);
+      cardsBlock.appendChild(card);
+      card.appendChild(cardButton);
 
-      // cardButton.textContent = input.value;
+      cardButton.textContent = input.value;
 
       input.value = "";
     });
