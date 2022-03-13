@@ -15,6 +15,7 @@ checkboxes.forEach((checkbox) => {
     } else {
       checkbox.value = 0;
       checkbox.classList.remove("checked");
+      checkbox.classList.remove("checked2");
     }
   });
 });
