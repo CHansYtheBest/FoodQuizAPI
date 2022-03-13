@@ -11,6 +11,10 @@ const circle = document.querySelectorAll(".circles");
 const frontCircle = document.querySelectorAll(".front");
 const backCircle = document.querySelectorAll(".back");
 
+const backButtonFooter = document.querySelector(".BackButton");
+const nextButtonFooter = document.querySelector(".NextButton");
+const doneButtonFooter = document.querySelector(".DoneButton");
+
 function main_H1Animation() {
   setTimeout(() => {
     mainBlock.setAttribute("class", "typeButtonsBlockON");
@@ -51,23 +55,29 @@ function changeCurrentPage(CurrentPage) {
   switch (CurrentPage) {
     case 0:
       changeCase(0);
-      main_H1_collection.textContent = "Step 1:";
+      backButtonFooter.classList.add("opacity0");
+      main_H1_collection.innerHTML = "Step 1:<br />Choose type of food.";
       break;
     case 1:
       changeCase(1);
-      main_H1_collection.textContent = "Step 2:";
+      backButtonFooter.classList.remove("opacity0");
+      main_H1_collection.innerHTML = "Step 2:<br />Choose cuisine.";
       break;
     case 2:
       changeCase(2);
-      main_H1_collection.textContent = "Step 3:";
+      main_H1_collection.innerHTML = "Step 3:<br />Choose your diet.";
       break;
     case 3:
       changeCase(3);
-      main_H1_collection.textContent = "Step 4:";
+      main_H1_collection.innerHTML = "Step 4:<br />Choose your intolarance.";
+      doneButtonFooter.classList.add("hidden");
+      nextButtonFooter.classList.remove("hidden");
       break;
     case 4:
       changeCase(4);
-      main_H1_collection.textContent = "Step 5:";
+      main_H1_collection.innerHTML = "Step 5:<br />Select ingredients.";
+      nextButtonFooter.classList.add("hidden");
+      doneButtonFooter.classList.remove("hidden");
       break;
     default:
       break;
