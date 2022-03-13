@@ -226,6 +226,9 @@ h1 {
 }
 .checked2 {
   font-size: 28px !important;
+  filter: grayscale(0%) !important;
+  color: #09ff00 !important;
+  outline: 4px solid #00ff15 !important;
 }
 /* КАРТОЧКИ */
 
@@ -392,24 +395,45 @@ h1 {
   display: flex;
   margin-bottom: 2px;
   width: 500px;
-  height: 50px;
+  height: 45.5px;
   justify-content: space-between;
   align-items: center;
-  border: 0.5px solid #000000;
+  outline: 0.5px solid #703a1b;
   border-radius: 10px;
   background-color: white;
+}
+
+.questionMark {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+
+  border: 1px solid #000000;
 }
 
 .dietCheckbox {
   width: 20px;
   height: 20px;
   background: #ffffff;
-  border: 1px solid #444444;
+  border: 1px solid #000000;
+  outline: black;
   box-sizing: border-box;
   border-radius: 5px;
   cursor: pointer;
   margin: 0;
   margin-left: 15px;
+}
+.dietCheckbox:checked {
+  color: red;
 }
 
 .dietLineText {
@@ -417,6 +441,10 @@ h1 {
   font-weight: 400;
   font-size: 24px;
   line-height: 36px;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  font-weight: 900;
 }
 
 .dietLineButton {
@@ -427,7 +455,6 @@ h1 {
   background: none;
   cursor: pointer;
 }
-
 .dietButton {
   transition: all 1s;
   height: 100%;
@@ -458,7 +485,7 @@ h1 {
 .line {
   border-bottom: 1px solid black;
   width: 100%;
-  margin: 25px 25px;
+  margin: 10px 25px 25px;
 }
 
 .ingredientsBlock {
@@ -479,6 +506,13 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   /* background-color: red; */
+}
+
+.alertMassage {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #a51919;
 }
 
 .inputBLOCK {

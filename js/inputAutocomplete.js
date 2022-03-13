@@ -2,6 +2,7 @@ const ingredientsInput = document.querySelector(".ingredientsInput");
 const addButton = document.querySelector(".inputAddButton");
 const cardsBlock = document.querySelector(".ingredientsChoosed");
 const clearButton = document.querySelector(".clearButton");
+const alertMassage = document.querySelector(".alertMassage");
 
 var nameMas = [];
 let choosedValueArray = [];
@@ -53,8 +54,11 @@ const Autocomplete = (selector) => {
     }
 
     input.addEventListener("input", () => {
+      alertMassage.textContent = "⠀";
       let value = input.value;
-      fetch(`https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${value}`)
+      fetch(
+        `https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${value}`
+      )
         .then((res) => {
           if (res.ok) {
             return res.json();
@@ -133,7 +137,8 @@ const Autocomplete = (selector) => {
 
     addButton.addEventListener("click", function (e) {
       if (choosedValueArray.includes(input.value)) {
-        alert("You cant choose the same ingredient twice!");
+        alertMassage.textContent = "You cant choose the same ingredient twice!";
+
         return;
       }
       choosedValueArray.push(input.value);
