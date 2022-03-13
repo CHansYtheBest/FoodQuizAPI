@@ -7,7 +7,11 @@ checkboxes.forEach((checkbox) => {
   checkbox.addEventListener("click", (e) => {
     if (checkbox.value == 0) {
       checkbox.value = 1;
-      checkbox.classList.add("checked");
+      if (CurrentPage == 3) {
+        checkbox.classList.add("checked2");
+      } else {
+        checkbox.classList.add("checked");
+      }
     } else {
       checkbox.value = 0;
       checkbox.classList.remove("checked");
