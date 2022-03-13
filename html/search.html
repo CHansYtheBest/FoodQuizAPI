@@ -361,19 +361,63 @@
     </section>
 
     <section id="stepDiet" class="stepSection hidden">
-      <div style="display: flex; justify-content: center; height: 100%">
+      <div class="dietBlock">
         <div class="dietButtonsBlock">
-          <button class="dietButton CheckboxButton" role="checkbox" data-value="gluten-free">Gluten Free</button>
-          <button class="dietButton CheckboxButton" role="checkbox" data-value="ketogenic">Ketogenic</button>
-          <button class="dietButton CheckboxButton" role="checkbo x" data-value="vegetarian">Vegetarian</button>
-          <button class="dietButton CheckboxButton" role="checkbox" data-value="lacto-Vegetarian">Lacto-Vegetarian</button>
-          <button class="dietButton CheckboxButton" role="checkbox" data-value="ovo-Vegetarian">Ovo-Vegetarian</button>
-          <button class="dietButton CheckboxButton" role="checkbox" data-value="vegan">Vegan</button>
-          <button class="dietButton CheckboxButton" role="checkbox" data-value="pescetarian">Pescetarian</button>
-          <button class="dietButton CheckboxButton" role="checkbox" data-value="paleo">Paleo</button>
-          <button class="dietButton CheckboxButton" role="checkbox" data-value="primal">Primal</button>
-          <button class="dietButton CheckboxButton" role="checkbox" data-value="low-fodmap">Low FODMAP</button>
-          <button class="dietButton CheckboxButton" role="checkbox" data-value="whole30">Whole30</button>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="gluten-free" />
+            <p class="dietLineText">Gluten Free</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="ketogenic" />
+            <p class="dietLineText">Ketogenic</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="vegetarian" />
+            <p class="dietLineText">Vegetarian</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="lacto-Vegetarian" />
+            <p class="dietLineText">Lacto-Vegetarian</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="ovo-Vegetarian" />
+            <p class="dietLineText">Ovo-Vegetarian</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="vegan" />
+            <p class="dietLineText">Vegan</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="pescetarian" />
+            <p class="dietLineText">Pescetarian</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="paleo" />
+            <p class="dietLineText">Paleo</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="primal" />
+            <p class="dietLineText">Primal</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="low-fodmap" />
+            <p class="dietLineText">Low FODMAP</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine">
+            <input class="dietCheckbox" type="checkbox" data-value="whole30" />
+            <p class="dietLineText">Whole30</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
         </div>
       </div>
     </section>
@@ -552,6 +596,7 @@
   <script src="/js/navigationFunc.js"></script>
   <script src="/js/inputAutocomplete.js"></script>
   <script src="/js/getDataFromApi.js"></script>
+  <script src="/js/moreInformationHover.js"></script>
   <script onload="main_H1Animation()" src="/js/stylesForSearch.js"></script>
 </html>
 

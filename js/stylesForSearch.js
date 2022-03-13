@@ -51,31 +51,41 @@ function changeCaseAnimantion(element, pageNumber) {
   element[pageNumber].classList.remove("hidden");
 }
 
+function changeMainText(text, string) {
+  text.classList.add("opacity0");
+  setTimeout(() => {
+    text.classList.remove("opacity0");
+    text.classList.add("opacity1");
+    text.innerHTML = string;
+  }, 300);
+  text.classList.remove("opacity1");
+}
+
 function changeCurrentPage(CurrentPage) {
   switch (CurrentPage) {
     case 0:
       changeCase(0);
       backButtonFooter.classList.add("opacity0");
-      main_H1_collection.innerHTML = "Step 1:<br />Choose type of food.";
+      changeMainText(main_H1_collection, "Step 1:<br />Choose type of food.");
       break;
     case 1:
       changeCase(1);
       backButtonFooter.classList.remove("opacity0");
-      main_H1_collection.innerHTML = "Step 2:<br />Choose cuisine.";
+      changeMainText(main_H1_collection, "Step 2:<br />Choose cuisine.");
       break;
     case 2:
       changeCase(2);
-      main_H1_collection.innerHTML = "Step 3:<br />Choose your diet.";
+      changeMainText(main_H1_collection, "Step 3:<br />Choose your diet.");
       break;
     case 3:
       changeCase(3);
-      main_H1_collection.innerHTML = "Step 4:<br />Choose your intolarance.";
+      changeMainText(main_H1_collection, "Step 4:<br />Choose your intolarance.");
       doneButtonFooter.classList.add("hidden");
       nextButtonFooter.classList.remove("hidden");
       break;
     case 4:
       changeCase(4);
-      main_H1_collection.innerHTML = "Step 5:<br />Select ingredients.";
+      changeMainText(main_H1_collection, "Step 5:<br />Select ingredients.");
       nextButtonFooter.classList.add("hidden");
       doneButtonFooter.classList.remove("hidden");
       break;
