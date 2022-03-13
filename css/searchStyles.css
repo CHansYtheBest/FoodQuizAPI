@@ -374,30 +374,80 @@ h1 {
 /* diet */
 
 #stepDiet {
-  justify-content: center;
   border-radius: 20px;
 }
 
 .dietButtonsBlock {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  width: 798px;
-  height: 100%;
-  border-radius: 20px;
+}
+
+.dietBlock {
+  display: flex;
+  justify-content: center;
+}
+
+.dietLine {
+  display: flex;
+  margin-bottom: 2px;
+  width: 500px;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.5px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.dietCheckbox {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 1px solid #444444;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0;
+  margin-left: 15px;
+}
+
+.dietLineText {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.dietLineButton {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .dietButton {
+  transition: all 1s;
   height: 100%;
-  border: 1px solid black;
-  background-color: white;
-  color: black;
-  font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  background-color: #ffffff;
+  background-image: none;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  border: black;
+  outline: 1.5px solid #000000;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
   cursor: pointer;
+  font-family: "Alfa Slab One", cursive;
+  color: #ffffff;
   transition: all 0.5s;
 }
 .dietButton:hover {
-  font-size: 32px;
   transition: all 0.5s;
 }
 
@@ -429,21 +479,6 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   /* background-color: red; */
-}
-
-input {
-  width: 300px;
-  padding: 12px 0px 12px 12px;
-  border: 2px solid #000000;
-  border-right: none;
-  border-radius: 10px 0px 0px 10px;
-  transition: all 0.3s ease;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-}
-input:focus {
-  outline: none;
 }
 
 .inputBLOCK {
@@ -508,6 +543,21 @@ input:focus {
 .autocomplete-item.focused {
   background: rgb(224, 224, 224);
   color: black !important;
+}
+
+.autocomplete-input {
+  width: 300px;
+  padding: 12px 0px 12px 12px;
+  border: 2px solid #000000;
+  border-right: none;
+  border-radius: 10px 0px 0px 10px;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+.autocomplete-input:focus {
+  outline: none;
 }
 
 .autocomplete-wrap.active .autocomplete-input {
@@ -627,5 +677,15 @@ input:focus {
 .opacity1 {
   opacity: 1;
   transition: all 0.3s;
+}
+
+.textCloud {
+  position: absolute;
+  width: 500px;
+  background-color: white;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
 }
 /* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
