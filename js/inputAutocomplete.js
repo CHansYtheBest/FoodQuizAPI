@@ -3,6 +3,7 @@ const addButton = document.querySelector(".inputAddButton");
 const cardsBlock = document.querySelector(".ingredientsChoosed");
 const clearButton = document.querySelector(".clearButton");
 const alertMassage = document.querySelector(".alertMassage");
+let ingredCard = document.getElementsByClassName("ingredCardButton");
 
 var nameMas = [];
 let choosedValueArray = [];
@@ -56,9 +57,7 @@ const Autocomplete = (selector) => {
     input.addEventListener("input", () => {
       alertMassage.textContent = "⠀";
       let value = input.value;
-      fetch(
-        `https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${value}`
-      )
+      fetch(`https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${value}`)
         .then((res) => {
           if (res.ok) {
             return res.json();
@@ -149,7 +148,6 @@ const Autocomplete = (selector) => {
 
       for (let i = 0; i < tempMas.length; i++) {
         if (tempMas[i] == input) {
-          console.log(tempMas[i], input);
           return true;
         }
       }
@@ -182,7 +180,6 @@ const Autocomplete = (selector) => {
       let imageForButton = await takeImageIng(input.value);
 
       let check = await checkInput(input.value);
-      console.log(check);
       if (check == false) {
         alertMassage.textContent = "This ingredient does not exist!";
         return;
@@ -194,6 +191,14 @@ const Autocomplete = (selector) => {
       cardsBlock.appendChild(cardButton);
       cardButton.textContent = input.value;
 
+      cardButton.addEventListener("click", function (e) {
+        for (let i = 0; i < choosedValueArray.length; i++) {
+          if (choosedValueArray[i] == cardButton.textContent) {
+            choosedValueArray.splice(i, 1);
+          }
+        }
+        cardButton.remove();
+      });
       input.value = "";
     });
 
