@@ -501,12 +501,50 @@ h1 {
 }
 
 .ingredientsChoosed {
-  width: 100%;
-  height: 100%;
+  width: 798px;
+  padding-right: 10px;
+
+  /* display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; */
+
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  /* background-color: red; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  gap: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #e0e0e0;
 }
+
+.ingredCardButton {
+  display: inline-block;
+  min-width: 100px;
+  height: 110px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 21px;
+  text-transform: capitalize;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  border: 0.5px solid black;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  transition: all 0.3s;
+  margin-bottom: 5px;
+  padding: 0px 20px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  /* background-image: url("https://spoonacular.com/cdn/ingredients_100x100/apple.jpg"); */
+}
+
+/* .ingredCardButton:hover {
+  transition: all 0.3s;
+} */
 
 .alertMassage {
   margin: 0;
@@ -601,32 +639,6 @@ h1 {
 /* INPUT */
 
 /* CARDS */
-
-.ingredCard {
-  width: 120px;
-  height: 40px;
-}
-
-.ingredCardButton {
-  width: 120px;
-  height: 40px;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  text-transform: capitalize;
-  background: #15c546;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  color: white;
-  transition: all 0.3s;
-}
-
-.ingredCardButton:hover {
-  background: #cb2222;
-  transition: all 0.3s;
-}
 
 .ingredientsCenter {
   display: flex;

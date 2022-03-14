@@ -16,12 +16,12 @@ const nextButtonFooter = document.querySelector(".NextButton");
 const doneButtonFooter = document.querySelector(".DoneButton");
 
 function main_H1Animation() {
-  body.style.pointerEvents = "none";
+  // body.style.pointerEvents = "none";
   setTimeout(() => {
     mainBlock.setAttribute("class", "typeButtonsBlockON");
     footer.classList.remove("opacity0");
     backToMenuAhref.classList.remove("opacity0");
-    body.style.pointerEvents = "all";
+    // body.style.pointerEvents = "all";
   }, 1500); //1500
 }
 

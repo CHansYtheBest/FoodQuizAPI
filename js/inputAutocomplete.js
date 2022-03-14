@@ -140,15 +140,35 @@ const Autocomplete = (selector) => {
         `https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${input}`
       );
       let data = await res.json();
-      console.log(data);
+      // console.log(data);
       let tempMas = [];
+      let tempMas2 = [];
       for (let i = 0; i < data.length; i++) {
         tempMas[i] = data[i].name;
+        tempMas2[i] = data[i].image;
       }
 
       for (let i = 0; i < tempMas.length; i++) {
         if (tempMas[i].includes(input)) {
           return true;
+        }
+      }
+      return false;
+    };
+
+    const takeImageIng = async (input) => {
+      let res = await fetch(
+        `https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${input}`
+      );
+      let data = await res.json();
+      console.log(data);
+      let tempMas = [];
+      for (let i = 0; i < data.length; i++) {
+        tempMas[i] = data[i].image;
+      }
+      for (let i = 0; i < tempMas.length; i++) {
+        if (tempMas[i].includes(input)) {
+          return tempMas[i];
         }
       }
       return false;
@@ -160,26 +180,22 @@ const Autocomplete = (selector) => {
         return;
       }
 
-      let test = await checkInput(input.value);
-      console.log(test, "check");
+      let imageForButton = await takeImageIng(input.value);
 
-      if (test == false) {
+      let check = await checkInput(input.value);
+      if (check == false) {
         alertMassage.textContent = "This ingredient does not exist!";
         return;
       }
 
       choosedValueArray.push(input.value);
 
-      let card = document.createElement("div");
       let cardButton = document.createElement("button");
-
-      card.setAttribute("class", "ingredCard");
       cardButton.setAttribute("class", "ingredCardButton");
-
-      cardsBlock.appendChild(card);
-      card.appendChild(cardButton);
-
+      cardButton.style.backgroundImage = `url('https://spoonacular.com/cdn/ingredients_100x100/${imageForButton}')`;
+      cardsBlock.appendChild(cardButton);
       cardButton.textContent = input.value;
+
       input.value = "";
     });
 
