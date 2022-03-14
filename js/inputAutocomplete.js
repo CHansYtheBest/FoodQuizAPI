@@ -140,7 +140,6 @@ const Autocomplete = (selector) => {
         `https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${input}`
       );
       let data = await res.json();
-      // console.log(data);
       let tempMas = [];
       let tempMas2 = [];
       for (let i = 0; i < data.length; i++) {
@@ -149,7 +148,8 @@ const Autocomplete = (selector) => {
       }
 
       for (let i = 0; i < tempMas.length; i++) {
-        if (tempMas[i].includes(input)) {
+        if (tempMas[i] == input) {
+          console.log(tempMas[i], input);
           return true;
         }
       }
@@ -161,13 +161,12 @@ const Autocomplete = (selector) => {
         `https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${input}`
       );
       let data = await res.json();
-      console.log(data);
       let tempMas = [];
       for (let i = 0; i < data.length; i++) {
         tempMas[i] = data[i].image;
       }
       for (let i = 0; i < tempMas.length; i++) {
-        if (tempMas[i].includes(input)) {
+        if (tempMas[i] == input) {
           return tempMas[i];
         }
       }
@@ -183,16 +182,15 @@ const Autocomplete = (selector) => {
       let imageForButton = await takeImageIng(input.value);
 
       let check = await checkInput(input.value);
+      console.log(check);
       if (check == false) {
         alertMassage.textContent = "This ingredient does not exist!";
         return;
       }
 
-      choosedValueArray.push(input.value);
-
       let cardButton = document.createElement("button");
       cardButton.setAttribute("class", "ingredCardButton");
-      cardButton.style.backgroundImage = `url('https://spoonacular.com/cdn/ingredients_100x100/${imageForButton}')`;
+      cardButton.style.backgroundImage = `url('https://spoonacular.com/cdn/ingredients_500x500/${imageForButton}')`;
       cardsBlock.appendChild(cardButton);
       cardButton.textContent = input.value;
 
