@@ -57,7 +57,9 @@ const Autocomplete = (selector) => {
     input.addEventListener("input", () => {
       alertMassage.textContent = "⠀";
       let value = input.value;
-      fetch(`https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${value}`)
+      fetch(
+        `https://api.spoonacular.com/food/ingredients/autocomplete?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=5&query=${value}`
+      )
         .then((res) => {
           if (res.ok) {
             return res.json();
@@ -164,7 +166,7 @@ const Autocomplete = (selector) => {
         tempMas[i] = data[i].image;
       }
       for (let i = 0; i < tempMas.length; i++) {
-        if (tempMas[i] == input) {
+        if (tempMas[i].includes(input)) {
           return tempMas[i];
         }
       }
@@ -199,7 +201,9 @@ const Autocomplete = (selector) => {
         }
         cardButton.remove();
       });
+      console.log(choosedValueArray);
       input.value = "";
+      cardButton.addEventListener("mouseenter", function () {});
     });
 
     clearButton.addEventListener("click", function () {
