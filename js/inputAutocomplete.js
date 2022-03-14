@@ -187,6 +187,8 @@ const Autocomplete = (selector) => {
         return;
       }
 
+      choosedValueArray.push(input.value);
+
       let cardButton = document.createElement("button");
       cardButton.setAttribute("class", "ingredCardButton");
       cardButton.style.backgroundImage = `url('https://spoonacular.com/cdn/ingredients_500x500/${imageForButton}')`;
@@ -201,7 +203,6 @@ const Autocomplete = (selector) => {
         }
         cardButton.remove();
       });
-      console.log(choosedValueArray);
       input.value = "";
       cardButton.addEventListener("mouseenter", function () {});
     });
