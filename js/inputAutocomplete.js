@@ -203,8 +203,17 @@ const Autocomplete = (selector) => {
         }
         cardButton.remove();
       });
+
+      // cardButton.addEventListener("mouseenter", function () {
+      //   cardButton.style.backgroundImage = "none";
+      //   cardButton.style.backgroundColor = "#b5332e ";
+      // });
+      // cardButton.addEventListener("mouseleave", function () {
+      //   cardButton.style.backgroundImage = `url('https://spoonacular.com/cdn/ingredients_500x500/${imageForButton}')`;
+      //   cardButton.style.backgroundColor = "white";
+      // });
+
       input.value = "";
-      cardButton.addEventListener("mouseenter", function () {});
     });
 
     clearButton.addEventListener("click", function () {

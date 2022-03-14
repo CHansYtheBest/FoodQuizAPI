@@ -502,7 +502,7 @@ h1 {
 
 .ingredientsChoosed {
   width: 798px;
-  padding-right: 10px;
+  padding: 10px;
 
   /* display: flex;
   justify-content: space-between;
@@ -530,7 +530,7 @@ h1 {
   border: none;
   cursor: pointer;
   background-color: white;
-  border: 0.5px solid black;
+  border: 0.5px solid rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
@@ -540,12 +540,50 @@ h1 {
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: auto 80%;
-  /* background-image: url("https://spoonacular.com/cdn/ingredients_100x100/apple.jpg"); */
 }
 
-/* .ingredCardButton:hover {
-  transition: all 0.3s;
-} */
+.ingredCardButton:hover {
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #a51919; */
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
 
 .alertMassage {
   margin: 0;
@@ -734,5 +772,9 @@ h1 {
   border: 1px solid black;
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
+}
+
+.deleteX {
+  position: absolute;
 }
 /* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
