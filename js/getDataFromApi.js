@@ -91,7 +91,7 @@ function createQuerry() {
 
 function getData(queryReady) {
     fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=10&addRecipeInformation=true&${queryReady}`
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=100&addRecipeInformation=true&${queryReady}`
     )
         .then((res) => {
             if (res.ok) {

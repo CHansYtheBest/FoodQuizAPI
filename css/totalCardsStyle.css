@@ -4,19 +4,22 @@
 }
 
 .containerTotal {
-    width: 1210px;
+    width: 1310px;
     margin: 0 auto;
     border: 1px solid black;
     border-radius: 20px;
     margin-top: 150px;
+    margin-bottom: 100px;
     background-color: white;
 }
 
 .totalH1 {
     text-align: center;
-    margin: 50px 0px 40px;
-    font-size: 32px;
+    margin: 100px 0px 40px;
+    font-size: 36px;
     font-weight: 900;
+    border-bottom: 1px solid #838383;
+    padding-bottom: 30px;
 }
 
 .totalMain {
@@ -25,56 +28,99 @@
 }
 
 .totalCards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 67px;
-    row-gap: 30px;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .totalCard {
-    height: 350px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 20px;
+}
+
+.totalCardRight {
+    padding: 15px 15px 15px 20px;
+    width: 277px;
+    height: 231px;
+}
+
+.totalParamBlock {
+    display: flex;
     justify-content: space-between;
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 250px;
+    width: 270px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 9px;
+    color: #8c8c8c;
+    margin-bottom: 15px;
+}
+.totalParamBlock > p {
+    margin: 0;
+    margin-right: 10px;
+}
+.totalParamBlock > img {
+    pointer-events: none;
 }
 
 .totalImage {
-    border-radius: 10px 10px 0 0;
-    width: 250px;
-    border-bottom: 0.5px solid #000;
-}
-
-.totalButton {
-    width: 100%;
-    display: block;
-    width: 200px;
-    height: 40px;
-    margin-bottom: 10px;
-    border-top: 1px solid #000000;
-    border: none;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    background-color: #cca00e;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 16px;
-}
-.totalButton:hover {
-    color: #000000;
-    background-color: rgb(122, 122, 122);
-    transition: all 0.3s;
+    width: 312px;
+    height: 231px;
+    margin: 15px 0px 0px 15px;
 }
 
 .totalText {
-    font-size: 18px;
+    width: 100%;
+    height: 38px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 19px;
+    margin: 10px 0px 20px;
+
+    color: #000000;
+}
+
+.totalCuisineText {
+    margin: 0;
+    font-style: normal;
     font-weight: 500;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #e3a400;
+}
+
+.totalSummary {
+    width: 100%;
+    height: 79px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+    text-overflow: ellipsis;
+    margin: 0;
+    overflow: hidden;
+
+    color: #8c8c8c;
+}
+
+.totalButton {
+    margin-top: 16px;
+    width: 100%;
+    height: 25px;
+    background: #e3a400;
+    cursor: pointer;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    color: #ffffff;
+    transition: 0.3s all;
+    font-family: "Poppins", sans-serif;
+}
+.totalButton:hover {
+    transition: 0.3s all;
+    background: #b38c00;
 }
