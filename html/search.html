@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/searchStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet" />
+    <title>Foodfinder</title>
+  </head>
+  <body class="container">
+    <header class="NavigationHeader">
+      <div class="HeaderBlock opacity0">
+        <a class="HeaderAhref" href="/html/mainPage.html"
+          ><svg
+            class="backMainPageArrow"
+            width="37"
+            height="25"
+            viewBox="0 0 37 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.70206 6.64591L7.26183 7.07494H7.87655H30.0603C31.836 7.07494 33.538 7.76775 34.7922 8.99956C36.0463 10.2312 36.75 11.9007 36.75 13.6406V22.7281C36.75 23.2629 36.5337 23.7767 36.1473 24.1562C35.7607 24.5359 35.2354 24.75 34.6868 24.75C34.1381 24.75 33.6129 24.5359 33.2263 24.1562C32.8398 23.7767 32.6236 23.2629 32.6236 22.7281V13.6406C32.6236 12.9703 32.3524 12.3283 31.8712 11.8558C31.3902 11.3833 30.7387 11.1187 30.0603 11.1187H7.87655H7.26183L7.70206 11.5477L10.7093 14.4785L10.7093 14.4785C10.9025 14.6667 11.0556 14.8903 11.1599 15.1364C11.2643 15.3824 11.318 15.6462 11.318 15.9125C11.318 16.1787 11.2643 16.4425 11.1599 16.6886C11.0556 16.9346 10.9025 17.1583 10.7093 17.3464L10.7078 17.3479C10.5162 17.5376 10.288 17.6884 10.0363 17.7914C9.78453 17.8944 9.51434 17.9475 9.24135 17.9475C8.96836 17.9475 8.69817 17.8944 8.44641 17.7914C8.19466 17.6884 7.96647 17.5376 7.77487 17.3479L7.77414 17.3471L0.836477 10.5335C0.649757 10.3414 0.503578 10.1154 0.406058 9.86834L0.406105 9.86832L0.404159 9.86367C0.198614 9.37228 0.198614 8.82137 0.404159 8.32998L0.404206 8.33L0.406058 8.32531C0.503578 8.07829 0.649757 7.85225 0.836477 7.66019L7.77414 0.846505C8.16251 0.465074 8.6902 0.25 9.24135 0.25C9.7925 0.25 10.3202 0.465074 10.7086 0.846505C11.0968 1.22779 11.314 1.74395 11.314 2.28118C11.314 2.81823 11.0969 3.33423 10.7089 3.71548C10.7088 3.7156 10.7087 3.71573 10.7086 3.71585L7.70206 6.64591Z"
+              stroke="black"
+              stroke-width="0.5"
+            />
+          </svg>
+          Back to main page</a
+        >
+      </div>
+      <div class="h1Block">
+        <h1 class="main_H1">Step 1:<br />Choose type of food</h1>
+      </div>
+      <div style="width: 288px"></div>
+    </header>
+
+    <section id="stepType" class="stepSection">
+      <div class="typeButtonsBlockOFF">
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/mainCurse.png)"
+          role="checkbox"
+          data-value="main-course"
+        >
+          Main course
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type2.png)"
+          role="checkbox"
+          data-value="side-dish"
+        >
+          Side dish
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type3.png)"
+          role="checkbox"
+          data-value="dessert"
+        >
+          Dessert
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type4.png)"
+          role="checkbox"
+          data-value="appetizer"
+        >
+          Appetizer
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type5.png)"
+          role="checkbox"
+          data-value="salad"
+        >
+          Salad
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type6.png)"
+          role="checkbox"
+          data-value="bread"
+        >
+          Bread
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type7.png)"
+          role="checkbox"
+          data-value="breakfast"
+        >
+          Breakfast
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type8.png)"
+          role="checkbox"
+          data-value="soup"
+        >
+          Soup
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type9.png)"
+          role="checkbox"
+          data-value="beverage"
+        >
+          Beverage
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type10.png)"
+          role="checkbox"
+          data-value="sauce"
+        >
+          Sauce
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type11.png)"
+          role="checkbox"
+          data-value="marinade"
+        >
+          Marinade
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type12.png)"
+          role="checkbox"
+          data-value="fingerfood"
+        >
+          Fingerfood
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type13.png)"
+          role="checkbox"
+          data-value="snack"
+        >
+          Snack
+        </button>
+        <button
+          class="typeButton CheckboxButton"
+          style="background-image: url(/images/type14.png)"
+          role="checkbox"
+          data-value="drink"
+        >
+          Drink
+        </button>
+      </div>
+    </section>
+
+    <section id="stepCuisine" class="stepSection hidden">
+      <div class="cuisineButtonsBlockOFF">
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine1.png)"
+          role="checkbox"
+          data-value="african"
+        >
+          African
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine2.png)"
+          role="checkbox"
+          data-value="american"
+        >
+          American
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine3.png)"
+          role="checkbox"
+          data-value="british"
+        >
+          British
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine4.png)"
+          role="checkbox"
+          data-value="cajun"
+        >
+          Cajun
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine5.png)"
+          role="checkbox"
+          data-value="caribbean"
+        >
+          Caribbean
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine6.png)"
+          role="checkbox"
+          data-value="chinese"
+        >
+          Chinese
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine7.png)"
+          role="checkbox"
+          data-value="eastern-european"
+        >
+          Eastern European
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine8.png)"
+          role="checkbox"
+          data-value="european"
+        >
+          European
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine9.png)"
+          role="checkbox"
+          data-value="french"
+        >
+          French
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine10.png)"
+          role="checkbox"
+          data-value="german"
+        >
+          German
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine11.png)"
+          role="checkbox"
+          data-value="greek"
+        >
+          Greek
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine12.png)"
+          role="checkbox"
+          data-value="indian"
+        >
+          Indian
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine13.png)"
+          role="checkbox"
+          data-value="irish"
+        >
+          Irish
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine14.png)"
+          role="checkbox"
+          data-value="japanise"
+        >
+          Japanise
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine15.png)"
+          role="checkbox"
+          data-value="jewish"
+        >
+          Jewish
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine16.png)"
+          role="checkbox"
+          data-value="korean"
+        >
+          Korean
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine17.png)"
+          role="checkbox"
+          data-value="latin-american"
+        >
+          Latin American
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine18.png)"
+          role="checkbox"
+          data-value="mediterranean"
+        >
+          Mediterranean
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine19.png)"
+          role="checkbox"
+          data-value="mexican"
+        >
+          Mexican
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine20.png)"
+          role="checkbox"
+          data-value="middle-eastern"
+        >
+          Middle Eastern
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine21.png)"
+          role="checkbox"
+          data-value="nordic"
+        >
+          Nordic
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine22.png)"
+          role="checkbox"
+          data-value="southern"
+        >
+          Southern
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine23.png)"
+          role="checkbox"
+          data-value="spanish"
+        >
+          Spanish
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine24.png)"
+          role="checkbox"
+          data-value="thai"
+        >
+          Thai
+        </button>
+        <button
+          class="CuisineButton CheckboxButton"
+          style="background-image: url(/images/cuisine25.png)"
+          role="checkbox"
+          data-value="vietnamese"
+        >
+          Vietnamese
+        </button>
+      </div>
+    </section>
+
+    <section id="stepDiet" class="stepSection hidden">
+      <div class="dietBlock">
+        <div class="dietButtonsBlock">
+          <div class="dietLine" style="background-image: url(/images/diet1.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="gluten-free" />
+            <p class="dietLineText">Gluten Free</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine" style="background-image: url(/images/diet2.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="ketogenic" />
+            <p class="dietLineText">Ketogenic</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine" style="background-image: url(/images/diet3.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="vegetarian" />
+            <p class="dietLineText">Vegetarian</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine" style="background-image: url(/images/diet4.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="lacto-Vegetarian" />
+            <p class="dietLineText">Lacto-Vegetarian</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine" style="background-image: url(/images/diet5.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="ovo-Vegetarian" />
+            <p class="dietLineText">Ovo-Vegetarian</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine" style="background-image: url(/images/diet6.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="vegan" />
+            <p class="dietLineText">Vegan</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine" style="background-image: url(/images/diet7.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="pescetarian" />
+            <p class="dietLineText">Pescetarian</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine" style="background-image: url(/images/diet8.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="paleo" />
+            <p class="dietLineText">Paleo</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine" style="background-image: url(/images/diet9.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="primal" />
+            <p class="dietLineText">Primal</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine" style="background-image: url(/images/diet10.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="low-fodmap" />
+            <p class="dietLineText">Low FODMAP</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+          <div class="dietLine" style="background-image: url(/images/diet11.png)">
+            <input class="dietCheckbox" type="checkbox" data-value="whole30" />
+            <p class="dietLineText">Whole30</p>
+            <button class="dietLineButton"><img src="/images/moreIngSVG.svg" alt="" /></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stepIntolar" class="stepSection hidden">
+      <div class="intolarButtonsBlock">
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="dairy"
+          style="background-image: url(/images/int1.png)"
+        >
+          Dairy
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="egg"
+          style="background-image: url(/images/int2.png)"
+        >
+          Egg
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="gluten"
+          style="background-image: url(/images/int3.png)"
+        >
+          Gluten
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="grain"
+          style="background-image: url(/images/int4.png)"
+        >
+          Grain
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="peanut"
+          style="background-image: url(/images/int5.png)"
+        >
+          Peanut
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="seafood"
+          style="background-image: url(/images/int6.png)"
+        >
+          Seafood
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="sesame"
+          style="background-image: url(/images/int7.png)"
+        >
+          Sesame
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="shellfish"
+          style="background-image: url(/images/int8.png)"
+        >
+          Shel- lfish
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="soy"
+          style="background-image: url(/images/int9.png)"
+        >
+          Soy
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="sulfite"
+          style="background-image: url(/images/int10.png)"
+        >
+          Sulfite
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="tree-nut"
+          style="background-image: url(/images/int11.png)"
+        >
+          Tree<br />Nut
+        </button>
+        <button
+          class="intolarButton CheckboxButton"
+          role="checkbox"
+          data-value="wheat"
+          style="background-image: url(/images/int12.png)"
+        >
+          Wheat
+        </button>
+      </div>
+    </section>
+
+    <section id="stepIngredients" class="stepSection hidden">
+      <div class="ingredientsCenter">
+        <div class="ingredientsBlock">
+          <div class="inputBLOCK">
+            <input id="autocomplete" type="text" placeholder="Enter the name of the ingredient" autocomplete="off" />
+            <button class="clearButton">✖</button>
+            <button class="inputAddButton">Add</button>
+          </div>
+          <p class="alertMassage">⠀</p>
+          <div class="line"></div>
+          <div class="ingredientsChoosed"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="pageStatus" class="NavigationFooter opacity0" data-page="0">
+      <button class="BackButton opacity0 NavigationButton">
+        <svg class="backArrow" width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.74247 7.44571L25.7499 7.42581L25.7524 10.0267L5.68971 10.0466L5.10084 10.0472L5.51028 10.4705L10.2252 15.3442L8.46466 17.1815L0.347065 8.79033L8.4275 0.360451L10.1953 2.18849L5.56174 7.02272L5.15575 7.4463L5.74247 7.44571Z"
+            stroke="black"
+            stroke-width="0.5"
+          />
+        </svg>
+        Previous step
+      </button>
+      <div class="pageCounter">
+        <div class="circles">
+          <div class="front frontWhite"><div class="back backBlack"></div></div>
+        </div>
+        <div class="circles">
+          <div class="front"><div class="back"></div></div>
+        </div>
+        <div class="circles">
+          <div class="front"><div class="back"></div></div>
+        </div>
+        <div class="circles">
+          <div class="front"><div class="back"></div></div>
+        </div>
+        <div class="circles">
+          <div class="front"><div class="back"></div></div>
+        </div>
+      </div>
+      <button class="NextButton NavigationButton">
+        Next step<svg class="nextArrow" width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20.9609 11.0865L0.953427 11.1064L0.950924 8.5055L21.0137 8.4856L21.6025 8.48501L21.1931 8.06177L16.4782 3.18802L18.2387 1.35074L26.3563 9.7419L18.2759 18.1718L16.5081 16.3437L21.1416 11.5095L21.5476 11.0859L20.9609 11.0865Z"
+            stroke="black"
+            stroke-width="0.5"
+          />
+        </svg>
+      </button>
+      <button class="NextButton DoneButton hidden NavigationButton">DONE</button>
+    </footer>
+  </body>
+  <script src="/js/getCheckboxValue.js"></script>
+  <script src="/js/navigationFunc.js"></script>
+  <script src="/js/inputAutocomplete.js"></script>
+  <script src="/js/getDataFromApi.js"></script>
+  <script src="/js/moreInformationHover.js"></script>
+  <script onload="main_H1Animation()" src="/js/stylesForSearch.js"></script>
+</html>
+
+<script>
+  Autocomplete("#autocomplete");
+</script>

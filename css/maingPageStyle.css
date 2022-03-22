@@ -1,0 +1,66 @@
+h1 {
+  margin: 0;
+}
+
+html {
+  background: url(/images/mainPhoto.jpg) no-repeat center center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+}
+
+.main__page-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 375px;
+}
+
+.main__page-h1 {
+  font-size: 100px;
+  font-family: "Redressed", cursive;
+  color: white;
+  width: fit-content;
+  text-shadow: rgb(0, 0, 0) 0 0 10px;
+  margin-bottom: 50px;
+}
+
+.main__page-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  font-family: "Poppins", sans-serif;
+  background: none;
+  border-radius: 20px;
+  border: 2px solid white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  cursor: pointer;
+  text-decoration: none;
+
+  width: 250px;
+  height: 78px;
+
+  color: #ffffff;
+
+  transition: all 0.5s;
+}
+
+.main__page-button:hover {
+  color: black;
+  background-color: white;
+
+  transition: all 0.5s;
+}
+
+.main__page-button:active {
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 0 #000000;
+}
