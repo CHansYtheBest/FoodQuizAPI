@@ -56,14 +56,13 @@ function createQuerryString(category, queryArr) {
       queryReady += queryArr[i];
     }
   }
-  console.log(queryReady);
   return queryReady;
 }
 
 function createQuerry() {
   queryArr = addDataToArray();
   let queryReady = "";
-  let querryTemp = "";
+  let querryTemp = [];
   for (let i = 0; i < queryArr.length; i++) {
     if (queryArr[i].length <= 0) {
     } else {
@@ -87,5 +86,21 @@ function createQuerry() {
           break;
       }
     }
+    queryReady += querryTemp[i];
   }
+  getData(queryReady);
+}
+
+function getData(queryReady) {
+  fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=10${queryReady}`)
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+    })
+    .then((data) => {
+      let dataString = JSON.stringify(data);
+      localStorage.setItem("data", dataString);
+      window.location = "/html/apiResult.html";
+    });
 }
