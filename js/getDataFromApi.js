@@ -25,10 +25,8 @@ function addDataToArray() {
     }
   }
 
-  if (ingredientsInput.value.length != 0) {
-    //НИЖЕ ВРЕМЕННА СТРОЧКА! ИСПРАВИТЬ КАК ТОЛЬКО БУДЕТ РАБОТАТЬ /inputAutocomplete.js
-    tempArr = ingredientsInput.value.split(" ");
-    queryArr[4] = tempArr;
+  if (choosedValueArray.length != 0) {
+    queryArr[4] = choosedValueArray;
   }
   console.log(queryArr);
   return queryArr;
