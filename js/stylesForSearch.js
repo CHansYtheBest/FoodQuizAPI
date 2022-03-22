@@ -69,6 +69,9 @@ function changeCurrentPage(CurrentPage) {
       changeCase(0);
       backButtonFooter.classList.add("opacity0");
       changeMainText(main_H1_collection, "Step 1:<br />Choose type of food.");
+      nextButtonFooter.classList.remove("hidden");
+      doneButtonFooter.classList.add("hidden");
+      backButtonFooter.classList.remove("hidden");
       break;
     case 1:
       changeCase(1);

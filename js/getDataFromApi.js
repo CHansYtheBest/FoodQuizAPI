@@ -97,8 +97,16 @@ function getData(queryReady) {
       }
     })
     .then((data) => {
-      let dataString = JSON.stringify(data);
-      localStorage.setItem("data", dataString);
-      window.location = "/html/apiResult.html";
+      if (data["totalResults"] == 0) {
+        alert("No results found, try again");
+        CurrentPage = 0;
+        NavFooter.dataset.page = CurrentPage;
+        changeCurrentPage(CurrentPage);
+        return;
+      } else {
+        let dataString = JSON.stringify(data);
+        localStorage.setItem("data", dataString);
+        window.location = "/html/apiResult.html";
+      }
     });
 }
