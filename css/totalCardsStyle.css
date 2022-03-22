@@ -1,24 +1,80 @@
 .totalBg {
-  background-image: url("/images/totalBg.jpg");
-  background-attachment: fixed;
+    background-image: url("/images/totalBg.jpg");
+    background-attachment: fixed;
 }
 
 .containerTotal {
-  width: 1210px;
-  margin: 0 auto;
-  border: 1px solid black;
-  border-radius: 20px;
+    width: 1210px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 150px;
+    background-color: white;
 }
 
-.total-MainSection {
-  margin-top: 150px;
-  background-color: white;
-  height: 2000px;
+.totalH1 {
+    text-align: center;
+    margin: 50px 0px 40px;
+    font-size: 32px;
+    font-weight: 900;
 }
 
-.total-H1 {
-  text-align: center;
-  margin-top: 60px;
-  font-size: 36px;
-  font-weight: 500;
+.totalMain {
+    padding: 0px 50px;
+    padding-bottom: 50px;
+}
+
+.totalCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 67px;
+    row-gap: 30px;
+    width: 100%;
+}
+
+.totalCard {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.totalImage {
+    border-radius: 10px 10px 0 0;
+    width: 250px;
+    border-bottom: 0.5px solid #000;
+}
+
+.totalButton {
+    width: 100%;
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-top: 1px solid #000000;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    background-color: #cca00e;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+.totalButton:hover {
+    color: #000000;
+    background-color: rgb(122, 122, 122);
+    transition: all 0.3s;
+}
+
+.totalText {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
