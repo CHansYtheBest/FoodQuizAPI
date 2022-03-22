@@ -25,6 +25,6 @@ backButton.addEventListener("click", (e) => {
 });
 
 //Кнопка готово. Функционал в /getDataFromApi.js
-// doneButton.addEventListener("click", (e) => {
-//   addDataToArray();
-// });
+doneButton.addEventListener("click", (e) => {
+  createQuerry();
+});
