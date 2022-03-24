@@ -1,6 +1,6 @@
 const typeButtons = document.querySelectorAll(".typeButton");
 const CuisineButtons = document.querySelectorAll(".CuisineButton");
-const ingredientsButtons = document.querySelectorAll(".ingredientsButton");
+const dietCheckboxMultiple = document.querySelectorAll(".dietCheckbox");
 const intolarButtons = document.querySelectorAll(".intolarButton");
 
 function addDataToArray() {
@@ -9,16 +9,24 @@ function addDataToArray() {
   for (let i = 0; i < 4; i++) {
     switch (i) {
       case 0:
-        queryArr[i] = addCheckboxDataToArr(typeButtons);
+        if (addCheckboxDataToArr(typeButtons) != undefined) {
+          queryArr.push(addCheckboxDataToArr(typeButtons));
+        }
         break;
       case 1:
-        queryArr[i] = addCheckboxDataToArr(CuisineButtons);
+        if (addCheckboxDataToArr(CuisineButtons) != undefined) {
+          queryArr.push(addCheckboxDataToArr(CuisineButtons));
+        }
         break;
       case 2:
-        queryArr[i] = addCheckboxDataToArr(ingredientsButtons);
+        if (addCheckboxDataToArr(dietCheckboxMultiple) != undefined) {
+          queryArr.push(addCheckboxDataToArr(dietCheckboxMultiple));
+        }
         break;
       case 3:
-        queryArr[i] = addCheckboxDataToArr(intolarButtons);
+        if (addCheckboxDataToArr(intolarButtons) != undefined) {
+          queryArr.push(addCheckboxDataToArr(intolarButtons));
+        }
         break;
       default:
         break;
@@ -26,9 +34,8 @@ function addDataToArray() {
   }
 
   if (choosedValueArray.length != 0) {
-    queryArr[4] = choosedValueArray;
+    queryArr.push(choosedValueArray);
   }
-  console.log(queryArr);
   return queryArr;
 }
 
@@ -41,7 +48,10 @@ function addCheckboxDataToArr(buttons) {
       i++;
     }
   });
-  return tempArr;
+  if (tempArr.length == 0) {
+  } else {
+    return tempArr;
+  }
 }
 
 function createQuerryString(category, queryArr) {
@@ -59,8 +69,10 @@ function createQuerryString(category, queryArr) {
 
 function createQuerry() {
   queryArr = addDataToArray();
+  console.log(queryArr);
   let queryReady = "";
   let querryTemp = [];
+  console.log(queryArr);
   for (let i = 0; i < queryArr.length; i++) {
     if (queryArr[i].length <= 0) {
     } else {
@@ -108,7 +120,8 @@ function getData(queryReady) {
       } else {
         let dataString = JSON.stringify(data);
         localStorage.setItem("data", dataString);
-        window.location = "/html/apiResult.html";
+        localStorage.setItem("query", queryReady);
+        window.open("/html/apiResult.html", "_blank");
       }
     });
 }
