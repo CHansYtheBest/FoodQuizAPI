@@ -1,36 +1,24 @@
 const typeButtons = document.querySelectorAll(".typeButton");
 const CuisineButtons = document.querySelectorAll(".CuisineButton");
-const dietCheckboxMultiple = document.querySelectorAll(".dietCheckbox");
 const intolarButtons = document.querySelectorAll(".intolarButton");
 
 function addDataToArray() {
   let queryArr = [];
 
-  for (let i = 0; i < 4; i++) {
-    switch (i) {
-      case 0:
-        if (addCheckboxDataToArr(typeButtons) != undefined) {
-          queryArr.push(addCheckboxDataToArr(typeButtons));
-        }
-        break;
-      case 1:
-        if (addCheckboxDataToArr(CuisineButtons) != undefined) {
-          queryArr.push(addCheckboxDataToArr(CuisineButtons));
-        }
-        break;
-      case 2:
-        if (addCheckboxDataToArr(dietCheckboxMultiple) != undefined) {
-          queryArr.push(addCheckboxDataToArr(dietCheckboxMultiple));
-        }
-        break;
-      case 3:
-        if (addCheckboxDataToArr(intolarButtons) != undefined) {
-          queryArr.push(addCheckboxDataToArr(intolarButtons));
-        }
-        break;
-      default:
-        break;
-    }
+  if (addCheckboxDataToArr(typeButtons) != undefined) {
+    queryArr.push(addCheckboxDataToArr(typeButtons));
+  }
+
+  if (addCheckboxDataToArr(CuisineButtons) != undefined) {
+    queryArr.push(addCheckboxDataToArr(CuisineButtons));
+  }
+
+  if (addCheckboxDataToArr(dietCheckboxMultiple) != undefined) {
+    queryArr.push(addCheckboxDataToArr(dietCheckboxMultiple));
+  }
+
+  if (addCheckboxDataToArr(intolarButtons) != undefined) {
+    queryArr.push(addCheckboxDataToArr(intolarButtons));
   }
 
   if (choosedValueArray.length != 0) {

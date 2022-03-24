@@ -1,5 +1,6 @@
 const body = document.querySelector("body");
 const checkboxes = document.querySelectorAll(".CheckboxButton");
+const dietCheckboxMultiple = document.querySelectorAll(".dietCheckbox");
 
 //Превращение кнопки в чекбокс с двумя стейтами
 checkboxes.forEach((checkbox) => {
