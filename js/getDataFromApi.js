@@ -4,21 +4,10 @@ const intolarButtons = document.querySelectorAll(".intolarButton");
 
 function addDataToArray() {
   let queryArr = [];
+  let buttonTypes = [typeButtons, CuisineButtons, dietCheckboxMultiple, intolarButtons];
 
-  if (addCheckboxDataToArr(typeButtons) != undefined) {
-    queryArr.push(addCheckboxDataToArr(typeButtons));
-  }
-
-  if (addCheckboxDataToArr(CuisineButtons) != undefined) {
-    queryArr.push(addCheckboxDataToArr(CuisineButtons));
-  }
-
-  if (addCheckboxDataToArr(dietCheckboxMultiple) != undefined) {
-    queryArr.push(addCheckboxDataToArr(dietCheckboxMultiple));
-  }
-
-  if (addCheckboxDataToArr(intolarButtons) != undefined) {
-    queryArr.push(addCheckboxDataToArr(intolarButtons));
+  for (let i = 0; i < buttonTypes.length; i++) {
+    queryArr.push(addCheckboxDataToArr(buttonTypes[i]));
   }
 
   if (choosedValueArray.length != 0) {
@@ -29,75 +18,53 @@ function addDataToArray() {
 
 function addCheckboxDataToArr(buttons) {
   let step = buttons[0].dataset.step;
-  let tempArr = [];
+  let checkedArr = [];
   let queryObj = {
     step,
-    tempArr: [],
+    checkedArr,
   };
   let i = 0;
   buttons.forEach((Button) => {
     if (Button.value == 1) {
-      tempArr[i] += `${Button.dataset.value}`;
+      checkedArr[i] = Button.dataset.value;
       i++;
     }
   });
-
-  if (tempArr.length == 0) {
+  if (checkedArr.length == 0) {
   } else {
     return queryObj;
   }
 }
 
-function createQuerryString(category, queryArr) {
+function createQuerryString(queryArr) {
   let queryReady;
-  queryReady = "&" + category + "=";
-  for (let i = 0; i < queryArr.length; i++) {
-    if (i != queryArr.length - 1) {
-      queryReady += queryArr[i] + ",";
+  queryReady = "&" + queryArr.step + "=";
+  for (let i = 0; i < queryArr.checkedArr.length; i++) {
+    if (i != queryArr.checkedArr.length - 1) {
+      queryReady += queryArr.checkedArr[i] + ",";
     } else {
-      queryReady += queryArr[i];
+      queryReady += queryArr.checkedArr[i];
     }
   }
   return queryReady;
 }
 
 function createQuerry() {
-  queryArr = addDataToArray();
+  let queryCheck = addDataToArray();
+  queryArr = queryCheck.filter(Boolean);
   console.log(queryArr);
-  // let queryReady = "";
-  // let querryTemp = [];
-  // for (let i = 0; i < queryArr.length; i++) {
-  //   if (queryArr[i].length <= 0) {
-  //   } else {
-  //     switch (i) {
-  //       case 0:
-  //         querryTemp[i] = createQuerryString("type", queryArr[i]);
-  //         break;
-  //       case 1:
-  //         querryTemp[i] = createQuerryString("cuisine", queryArr[i]);
-  //         break;
-  //       case 2:
-  //         querryTemp[i] = createQuerryString("diet", queryArr[i]);
-  //         break;
-  //       case 3:
-  //         querryTemp[i] = createQuerryString("intolerances", queryArr[i]);
-  //         break;
-  //       case 4:
-  //         querryTemp[i] = createQuerryString("includeIngredients", queryArr[i]);
-  //         break;
-  //       default:
-  //         break;
-  //     }
-  //   }
-  //   queryReady += querryTemp[i];
-  // }
-  // getData(queryReady);
+  let queryReady = "";
+  let querryTemp = [];
+  for (let i = 0; i < queryArr.length; i++) {
+    querryTemp[i] = createQuerryString(queryArr[i]);
+    queryReady += querryTemp[i];
+  }
+  console.log(queryReady);
+  getData(queryReady);
 }
 
 function getData(queryReady) {
-  fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=100&addRecipeInformation=true&${queryReady}`
-  )
+  fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=a5dd116b2a6a41218a0ff5168be6a96e&number=100&addRecipeInformation=true${queryReady}`)
     .then((res) => {
       if (res.ok) {
         return res.json();
