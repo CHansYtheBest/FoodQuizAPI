@@ -21,7 +21,11 @@ function addDataToArray() {
   }
 
   if (choosedValueArray.length != 0) {
-    queryObj.push(choosedValueArray);
+    let ingredObj = {
+      step: "includeIngredients",
+      checkedArr: choosedValueArray,
+    };
+    queryObj.push(ingredObj);
   }
   return queryObj;
 }
