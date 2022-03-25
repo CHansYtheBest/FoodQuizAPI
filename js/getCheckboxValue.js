@@ -4,6 +4,7 @@ const dietCheckboxMultiple = document.querySelectorAll(".dietCheckbox");
 
 //Превращение кнопки в чекбокс с двумя стейтами
 checkboxes.forEach((checkbox) => {
+  var classList = checkbox.className.split(/\s+/);
   checkbox.value = 0;
   checkbox.addEventListener("click", (e) => {
     if (checkbox.value == 0) {
@@ -23,4 +24,20 @@ checkboxes.forEach((checkbox) => {
       }
     }
   });
+  switch (classList[0]) {
+    case "typeButton":
+      checkbox.dataset.step = "type";
+      break;
+    case "CuisineButton":
+      checkbox.dataset.step = "cuisine";
+      break;
+    case "dietCheckbox":
+      checkbox.dataset.step = "diet";
+      break;
+    case "intolarButton":
+      checkbox.dataset.step = "intolerances";
+      break;
+    default:
+      break;
+  }
 });

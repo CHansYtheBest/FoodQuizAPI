@@ -28,17 +28,23 @@ function addDataToArray() {
 }
 
 function addCheckboxDataToArr(buttons) {
+  let step = buttons[0].dataset.step;
   let tempArr = [];
+  let queryObj = {
+    step,
+    tempArr: [],
+  };
   let i = 0;
   buttons.forEach((Button) => {
     if (Button.value == 1) {
-      tempArr[i] = Button.dataset.value;
+      tempArr[i] += `${Button.dataset.value}`;
       i++;
     }
   });
+
   if (tempArr.length == 0) {
   } else {
-    return tempArr;
+    return queryObj;
   }
 }
 
@@ -58,35 +64,34 @@ function createQuerryString(category, queryArr) {
 function createQuerry() {
   queryArr = addDataToArray();
   console.log(queryArr);
-  let queryReady = "";
-  let querryTemp = [];
-  console.log(queryArr);
-  for (let i = 0; i < queryArr.length; i++) {
-    if (queryArr[i].length <= 0) {
-    } else {
-      switch (i) {
-        case 0:
-          querryTemp[i] = createQuerryString("type", queryArr[i]);
-          break;
-        case 1:
-          querryTemp[i] = createQuerryString("cuisine", queryArr[i]);
-          break;
-        case 2:
-          querryTemp[i] = createQuerryString("diet", queryArr[i]);
-          break;
-        case 3:
-          querryTemp[i] = createQuerryString("intolerances", queryArr[i]);
-          break;
-        case 4:
-          querryTemp[i] = createQuerryString("includeIngredients", queryArr[i]);
-          break;
-        default:
-          break;
-      }
-    }
-    queryReady += querryTemp[i];
-  }
-  getData(queryReady);
+  // let queryReady = "";
+  // let querryTemp = [];
+  // for (let i = 0; i < queryArr.length; i++) {
+  //   if (queryArr[i].length <= 0) {
+  //   } else {
+  //     switch (i) {
+  //       case 0:
+  //         querryTemp[i] = createQuerryString("type", queryArr[i]);
+  //         break;
+  //       case 1:
+  //         querryTemp[i] = createQuerryString("cuisine", queryArr[i]);
+  //         break;
+  //       case 2:
+  //         querryTemp[i] = createQuerryString("diet", queryArr[i]);
+  //         break;
+  //       case 3:
+  //         querryTemp[i] = createQuerryString("intolerances", queryArr[i]);
+  //         break;
+  //       case 4:
+  //         querryTemp[i] = createQuerryString("includeIngredients", queryArr[i]);
+  //         break;
+  //       default:
+  //         break;
+  //     }
+  //   }
+  //   queryReady += querryTemp[i];
+  // }
+  // getData(queryReady);
 }
 
 function getData(queryReady) {
