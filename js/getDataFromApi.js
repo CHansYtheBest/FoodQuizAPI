@@ -1,19 +1,29 @@
-const typeButtons = document.querySelectorAll(".typeButton");
-const CuisineButtons = document.querySelectorAll(".CuisineButton");
-const intolarButtons = document.querySelectorAll(".intolarButton");
+function createQuerry() {
+  let queryCheck = addDataToArray();
+  queryObj = queryCheck.filter(Boolean);
+  console.log(queryObj);
+  let queryReady = "";
+  let querryTemp = [];
+  for (let i = 0; i < queryObj.length; i++) {
+    querryTemp[i] = createQuerryString(queryObj[i]);
+    queryReady += querryTemp[i];
+  }
+  console.log(queryReady);
+  getData(queryReady);
+}
 
 function addDataToArray() {
-  let queryArr = [];
+  let queryObj = [];
   let buttonTypes = [typeButtons, CuisineButtons, dietCheckboxMultiple, intolarButtons];
 
   for (let i = 0; i < buttonTypes.length; i++) {
-    queryArr.push(addCheckboxDataToArr(buttonTypes[i]));
+    queryObj.push(addCheckboxDataToArr(buttonTypes[i]));
   }
 
   if (choosedValueArray.length != 0) {
-    queryArr.push(choosedValueArray);
+    queryObj.push(choosedValueArray);
   }
-  return queryArr;
+  return queryObj;
 }
 
 function addCheckboxDataToArr(buttons) {
@@ -36,31 +46,17 @@ function addCheckboxDataToArr(buttons) {
   }
 }
 
-function createQuerryString(queryArr) {
+function createQuerryString(queryObj) {
   let queryReady;
-  queryReady = "&" + queryArr.step + "=";
-  for (let i = 0; i < queryArr.checkedArr.length; i++) {
-    if (i != queryArr.checkedArr.length - 1) {
-      queryReady += queryArr.checkedArr[i] + ",";
+  queryReady = "&" + queryObj.step + "=";
+  for (let i = 0; i < queryObj.checkedArr.length; i++) {
+    if (i != queryObj.checkedArr.length - 1) {
+      queryReady += queryObj.checkedArr[i] + ",";
     } else {
-      queryReady += queryArr.checkedArr[i];
+      queryReady += queryObj.checkedArr[i];
     }
   }
   return queryReady;
-}
-
-function createQuerry() {
-  let queryCheck = addDataToArray();
-  queryArr = queryCheck.filter(Boolean);
-  console.log(queryArr);
-  let queryReady = "";
-  let querryTemp = [];
-  for (let i = 0; i < queryArr.length; i++) {
-    querryTemp[i] = createQuerryString(queryArr[i]);
-    queryReady += querryTemp[i];
-  }
-  console.log(queryReady);
-  getData(queryReady);
 }
 
 function getData(queryReady) {
@@ -81,7 +77,7 @@ function getData(queryReady) {
         let dataString = JSON.stringify(data);
         localStorage.setItem("data", dataString);
         localStorage.setItem("query", queryReady);
-        window.open("/html/apiResult.html", "_blank");
+        window.open("/html/apiResult.html", "_self");
       }
     });
 }
