@@ -81,7 +81,7 @@ function getData(queryReady) {
         let dataString = JSON.stringify(data);
         localStorage.setItem("data", dataString);
         localStorage.setItem("query", queryReady);
-        window.open("/html/apiResult.html", "_self");
+        window.open("apiResult.html", "_self");
       }
     });
 }

@@ -3,7 +3,7 @@ h1 {
 }
 
 html {
-  background: url(/images/mainPhoto.jpg) no-repeat center center;
+  background: url("../images/mainPhoto.jpg") no-repeat center center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
