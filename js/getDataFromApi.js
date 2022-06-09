@@ -68,6 +68,8 @@ function getData(queryReady) {
     .then((res) => {
       if (res.ok) {
         return res.json();
+      } else {
+        console.log("err");
       }
     })
     .then((data) => {
