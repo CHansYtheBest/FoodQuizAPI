@@ -51,13 +51,13 @@ window.addEventListener("load", () => {
     totalCardImage.setAttribute("src", data.results[i].image);
     totalCardButton.textContent = "View Full Recipe";
     totalCardSummary.innerHTML = data.results[i].summary;
-    totalParamIcon1.setAttribute("src", "/../images/smile.svg");
+    totalParamIcon1.setAttribute("src", "../images/smile.svg");
     totalParamText1.innerHTML = data.results[i].aggregateLikes;
     totalParamText1.innerHTML += " likes";
-    totalParamIcon2.setAttribute("src", "/../images/health.svg");
+    totalParamIcon2.setAttribute("src", "../images/health.svg");
     totalParamText2.innerHTML = data.results[i].healthScore;
     totalParamText2.innerHTML += " health score";
-    totalParamIcon3.setAttribute("src", "/../images/time.svg");
+    totalParamIcon3.setAttribute("src", "../images/time.svg");
     totalParamText3.innerHTML = data.results[i].readyInMinutes;
     totalParamText3.innerHTML += " min";
     totalCards.append(totalCard);
